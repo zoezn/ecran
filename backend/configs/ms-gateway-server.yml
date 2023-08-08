@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ms-gateway-server
+   name: ms-gateway-server
   cloud:
     gateway:
       discovery:
@@ -29,6 +29,7 @@ eureka:
     fetchRegistry: true
     serviceURL:
       defaultZone: http://localhost:8761/eureka
+
 management:
   endpoint:
     gateway:
