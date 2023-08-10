@@ -3,14 +3,12 @@ server:
 
 spring:
   application:
-   name: api-movie
+    name: api-movie
   data:
     mongodb:
       host: 44.201.102.47
       port: 27017
       database: movies-dev-mongo
-      username: grupo01
-      password: Wn6np6A@6qiP
 
 eureka:
   client:
