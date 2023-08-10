@@ -8,8 +8,8 @@ import { fetchMoviesByTitle } from "@/pages/api/search";
 const AutocompleteItem = ({ movieId, title, image_url }) => {
 	return (
 		<List>
-			<Link href={`/detail/${movieId}`}>
-			<div className="list">
+			
+			<Link  href={`/detail/${movieId}`} className="list">
 				<div className="imageList">
 					<img src={image_url} alt={title} className="image" />
 				</div>
@@ -19,9 +19,9 @@ const AutocompleteItem = ({ movieId, title, image_url }) => {
 					<p>Genero</p>
 					<p>Año</p>
 				</div>
-			</div>
-			<hr />
 			</Link>
+			<hr />
+			
 		</List>
 	);
 };
