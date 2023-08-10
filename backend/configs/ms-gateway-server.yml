@@ -18,6 +18,14 @@ spring:
           uri: lb://api-series
           predicates:
             - Path=/api/v1/series/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+            - GET
+            - POST
 
 info:
   app:
