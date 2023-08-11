@@ -1,6 +1,5 @@
 server:
   port: 8080
-
 spring:
   application:
    name: api-series
@@ -9,7 +8,6 @@ spring:
       database: series-dev-mongo
       port: 27017
       host: 44.201.102.47
-
 eureka:
   client:
     registerWithEureka: true
