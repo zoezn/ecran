@@ -10,7 +10,7 @@ spring:
       host: 44.201.102.47
 springdoc:
   swagger-ui:
-    path: swagger
+    path: /api/v1/series/swagger
 eureka:
   client:
     registerWithEureka: true
