@@ -8,6 +8,9 @@ spring:
       database: series-dev-mongo
       port: 27017
       host: 44.201.102.47
+springdoc:
+  swagger-ui:
+    path: swagger
 eureka:
   client:
     registerWithEureka: true
