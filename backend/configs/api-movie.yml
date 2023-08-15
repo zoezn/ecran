@@ -6,8 +6,7 @@ spring:
     name: api-movie
   data:
     mongodb:
-      host: 44.201.102.47
-      port: 27017
+      uri: mongodb://root:root1234@44.201.102.47:27017
       database: movies-dev-mongo
 
 eureka:
