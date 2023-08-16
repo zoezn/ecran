@@ -1,13 +1,12 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
    name: api-series
   data:
     mongodb:
+      uri: mongodb://root:root1234@44.201.102.47:27017
       database: series-dev-mongo
-      port: 27017
-      host: 44.201.102.47
 springdoc:
   swagger-ui:
     path: /api/v1/series/swagger
@@ -15,5 +14,5 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    serviceUrl:
+    service-url:
       defaultZone: http://44.203.152.200:8761/eureka

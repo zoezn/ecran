@@ -35,7 +35,7 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: true
-    serviceURL:
+    service-url:
       defaultZone: http://44.203.152.200:8761/eureka
 
 management:
