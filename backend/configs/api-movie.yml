@@ -3,16 +3,15 @@ server:
 
 spring:
   application:
-   name: api-movie
+    name: api-movie
   data:
     mongodb:
+      uri: mongodb://root:root1234@44.201.102.47:27017
       database: movies-dev-mongo
-      port: 27017
-      host: 44.201.102.47
 
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    serviceUrl:
+    service-url:
       defaultZone: http://44.203.152.200:8761/eureka
