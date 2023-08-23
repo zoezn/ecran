@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       globalcors:
-          cors-configurations:
+          corsConfigurations:
              '[/**]':
              allowed-origins: "*"
              allowed-methods: "*"
