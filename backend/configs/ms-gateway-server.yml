@@ -19,13 +19,15 @@ spring:
           predicates:
             - Path=/api/v1/series/**
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedHeaders: "*"
             allowedMethods:
             - GET
             - POST
+            - PUT
+            - PATCH
+            - DELETE
 
 
 info:
