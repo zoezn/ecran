@@ -27,6 +27,7 @@ spring:
             - GET
             - POST
 
+
 info:
   app:
     name: ${spring.application.name}
