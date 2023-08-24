@@ -16,3 +16,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://44.203.152.200:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: serviceregistry,health,info
