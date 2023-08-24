@@ -29,6 +29,7 @@ spring:
             - PATCH
             - DELETE
 
+
 info:
   app:
     name: ${spring.application.name}
