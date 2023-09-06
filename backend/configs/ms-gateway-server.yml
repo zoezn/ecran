@@ -18,6 +18,10 @@ spring:
           uri: lb://api-series
           predicates:
             - Path=/api/v1/series/**
+        - id: users
+          uri: lb://users
+          predicates:
+            - Path=/users/**
       globalcors:
         cors-configurations:
           '[/**]':
