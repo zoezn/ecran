@@ -15,6 +15,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  datasource:
+    url: jdbc:mysql://db.ctd.academy:3306/0723TDPI2N1C01LAED1021FT_GRUPO1?serverTimezone=UTC
+    username: 0723TDPI2N1C01LAED1021FT_GRUPO1
+    password: sae4Keix
 
 eureka:
   client:
@@ -65,3 +69,13 @@ logging:
     level: "%5p [${spring.application.name}, %X{traceId:-}, %X{spanId:-}]"
   file:
     name: users.log
+
+token:
+  expiration_time: 259200000
+  secret: "UhQbrtfsX8Q0S6MoJFjzQZthOK4Kbd5h7gH6YtT3jKreEjICe9OdpUULUaG50mbM"
+login:
+  url:
+    path: /users/login
+
+#movies:
+#  url: http://movies/users/%s/movies

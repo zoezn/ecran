@@ -18,10 +18,22 @@ spring:
           uri: lb://api-series
           predicates:
             - Path=/api/v1/series/**
-        - id: users
+        - id: users-signup
+          uri: lb://users
+          predicates:
+            - Path=/users/signup
+        - id: users-login
+          uri: lb://users
+          predicates:
+            - Path=/users/login
+        - id: users-authorization
           uri: lb://users
           predicates:
             - Path=/users/**
+            - Header=Authorization, Bearer (.*)
+          filters:
+            - RemoveRequestHeader=Cookie
+            - AuthorizationHeaderFilter
       globalcors:
         cors-configurations:
           '[/**]':
@@ -53,3 +65,6 @@ management:
     web:
       exposure:
         include: gateway,serviceregistry,health,info
+
+token:
+  secret: UhQbrtfsX8Q0S6MoJFjzQZthOK4Kbd5h7gH6YtT3jKreEjICe9OdpUULUaG50mbM
