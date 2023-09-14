@@ -6,6 +6,9 @@ spring:
    name: ms-gateway-server
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - AddResponseHeader=Access-Control-Allow-Origin, *
       discovery:
         locator:
           enabled: true
@@ -38,13 +41,13 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins: "*"
+            allowedHeaders: "*"
             allowedMethods:
             - GET
             - POST
             - PUT
             - PATCH
             - DELETE
-
 
 info:
   app:
