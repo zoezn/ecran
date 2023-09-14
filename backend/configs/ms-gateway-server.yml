@@ -21,7 +21,7 @@ spring:
         - id: users-signup
           uri: lb://users
           predicates:
-            - Path=/users/signup
+            - Path=/users
         - id: users-login
           uri: lb://users
           predicates:
