@@ -48,9 +48,6 @@ spring:
             - PUT
             - PATCH
             - DELETE
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-        - AddResponseHeader=Access-Control-Allow-Origin, *
 
 info:
   app:
