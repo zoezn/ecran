@@ -29,6 +29,10 @@ spring:
           uri: lb://users
           predicates:
             - Path=/users/login
+        - id: users-confirmation
+          uri: lb://users
+          predicates:
+            - Path=/users/*/confirm
         - id: users-authorization
           uri: lb://users
           predicates:
