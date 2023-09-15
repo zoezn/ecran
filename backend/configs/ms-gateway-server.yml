@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin Access-Control-Expose-Headers
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
         - AddResponseHeader=Access-Control-Allow-Origin, *
       discovery:
         locator:
@@ -25,6 +25,8 @@ spring:
           uri: lb://users
           predicates:
             - Path=/users/signup
+          filters:
+            - AddResponseHeader=token
         - id: users-login
           uri: lb://users
           predicates:
