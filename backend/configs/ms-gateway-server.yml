@@ -25,6 +25,8 @@ spring:
           uri: lb://users
           predicates:
             - Path=/users/signup
+          filters:
+            - AddResponseHeader=token
         - id: users-login
           uri: lb://users
           predicates:
