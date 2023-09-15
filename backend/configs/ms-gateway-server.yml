@@ -43,7 +43,7 @@ spring:
             - AuthorizationHeaderFilter
       globalcors:
         cors-configurations:
-          '[/**]':
+          '[/api/v1/movies/**,/api/v1/series/**]':
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
