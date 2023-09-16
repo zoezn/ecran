@@ -37,7 +37,6 @@ spring:
           uri: lb://users
           predicates:
             - Path=/users/**
-            - Header=Authorization, Bearer (.*)
           filters:
             - RemoveRequestHeader=Cookie
             - AuthorizationHeaderFilter
