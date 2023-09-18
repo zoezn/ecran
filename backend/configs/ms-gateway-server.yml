@@ -14,31 +14,31 @@ spring:
           enabled: true
       routes:
         - id: api-movie
-          uri: lb://API-MOVIE
+          uri: lb://api-movie
           predicates:
             - Path=/api/v1/movies/**
-        - id: api-seri
-          uri: lb://API-SERIES
+        - id: api-series
+          uri: lb://api-series
           predicates:
             - Path=/api/v1/series/**
         - id: users-signup
-          uri: lb://USERS
+          uri: lb://users
           predicates:
             - Path=/users/signup
         - id: users-login
-          uri: lb://USERS
+          uri: lb://users
           predicates:
             - Path=/users/login
         - id: users-confirmation
-          uri: lb://USERS
+          uri: lb://users
           predicates:
             - Path=/users/*/confirm
         - id: users-email
-          uri: lb://USERS
+          uri: lb://users
           predicates:
             - Path=/users/*/sendemail
         - id: users-authorization
-          uri: lb://USERS
+          uri: lb://users
           predicates:
             - Path=/users/**
           filters:
