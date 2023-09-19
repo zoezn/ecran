@@ -52,7 +52,7 @@ spring:
             - Path=/users/**
           filters:
             - RemoveRequestHeader=Cookie
-            - AuthorizationHeaderFilter
+            - AuthorizationHeaderFilter=ROLE_USER WRITE READ
       globalcors:
         cors-configurations:
           '[/**]':
