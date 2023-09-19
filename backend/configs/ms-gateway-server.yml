@@ -25,7 +25,7 @@ spring:
             - Method=POST,PUT,DELETE
           filters:
             - RemoveRequestHeader=Cookie
-            - AuthorizationHeaderFilter=ROLE_ADMIN WRITE DELETE
+            - AuthorizationHeaderFilter=ROLE_ADMIN DELETE
         - id: api-series
           uri: lb://api-series
           predicates:
