@@ -17,6 +17,15 @@ spring:
           uri: lb://api-movie
           predicates:
             - Path=/api/v1/movies/**
+            - Method=GET
+        - id: api-movie-admin
+          uri: lb://api-movie
+          predicates:
+            - Path=/api/v1/movies/**
+            - Method=POST,PUT,DELETE
+          filters:
+            - RemoveRequestHeader=Cookie
+            - AuthorizationHeaderFilter=ROLE_ADMIN WRITE DELETE
         - id: api-series
           uri: lb://api-series
           predicates:
@@ -33,6 +42,10 @@ spring:
           uri: lb://users
           predicates:
             - Path=/users/*/confirm
+        - id: users-email
+          uri: lb://users
+          predicates:
+            - Path=/users/*/sendemail
         - id: users-authorization
           uri: lb://users
           predicates:
