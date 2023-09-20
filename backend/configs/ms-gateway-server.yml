@@ -22,7 +22,6 @@ spring:
           uri: lb://api-movie
           predicates:
             - Path=/api/v1/movies/**
-            - Method=POST,PUT,DELETE
           filters:
             - RemoveRequestHeader=Cookie
             - AuthorizationHeaderFilter=ROLE_ADMIN DELETE
