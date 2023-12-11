@@ -2,8 +2,6 @@
 
 ## BackEnd
 
-URL DE LA API: http://54.234.185.146:8080
-
 - Endpoints:
     - Peliculas (**BASE /api/v1/movies**):
         - GET Listado de películas **/api/v1/movies**
