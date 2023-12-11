@@ -20,5 +20,3 @@
         - DELETE Eliminar película por id **/api/v1/movies/:id**
 
 Solo el usuario administrador puede utilizar los métodos POST, PUT y DELETE
-Email: admin@ecran.com
-Password: admin
